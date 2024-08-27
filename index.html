@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>꿈 타이머 앱</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 480px;
+            margin: 2rem auto;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        main {
+            padding: 1.5rem;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            display: flex;
+            align-items: center;
+            color: #4a5568;
+            margin-top: 0;
+        }
+        .card h2 svg {
+            margin-right: 0.5rem;
+        }
+        .progress-bar {
+            background-color: #e2e8f0;
+            border-radius: 9999px;
+            height: 0.5rem;
+            overflow: hidden;
+        }
+        .progress {
+            background: linear-gradient(90deg, #ffa500 0%, #ff4500 100%);
+            height: 100%;
+            width: 60%;
+        }
+        .timer {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            color: #2575fc;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f8fafc;
+            padding: 1rem 0;
+        }
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #4a5568;
+            text-decoration: none;
+        }
+        .nav-item:hover {
+            color: #2575fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>꿈 타이머</h1>
+        </header>
+        <main>
+            <div class="card">
+                <h2>
+                    <i data-feather="target"></i>
+                    현재 목표
+                </h2>
+                <p>백엔드 개발자 되기</p>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h2>
+                    <i data-feather="clock"></i>
+                    남은 시간
+                </h2>
+                <p class="timer">237일 13시간</p>
+            </div>
+        </main>
+        <nav>
+            <a href="#" class="nav-item">
+                <i data-feather="list"></i>
+                <span>할 일</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-feather="calendar"></i>
+                <span>일정</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-feather="pie-chart"></i>
+                <span>통계</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-feather="settings"></i>
+                <span>설정</span>
+            </a>
+        </nav>
+    </div>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
